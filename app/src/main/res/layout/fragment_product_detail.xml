@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/srl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="64dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:src="@tools:sample/backgrounds/scenic"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/marginMid"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAllCaps="false"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Add To Cart"
+                app:cornerRadius="@dimen/corner_default"
+                android:backgroundTint="@color/colorSecondary"
+                android:layout_margin="@dimen/marginMid"
+                />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnAddCart"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="@dimen/text_h2"
+                android:textColor="@color/colorPrimary"
+                tools:text="Product A"
+                android:layout_marginTop="@dimen/marginMid"
+                android:layout_marginStart="@dimen/marginMid"
+                android:layout_marginEnd="@dimen/marginMin"
+                />
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                app:layout_constraintBottom_toBottomOf="@+id/btnAddCart"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="@dimen/text_h3"
+                android:singleLine="true"
+                tools:text="Rs 12000"
+                android:textColor="@color/colorOnSurfaceVariant"
+                android:layout_marginTop="@dimen/marginMin"
+                android:layout_marginStart="@dimen/marginMid"
+                android:layout_marginEnd="@dimen/marginDefault"
+                />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierProductInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="btnAddCart,price"
+                />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+                android:layout_margin="@dimen/marginMid"
+                android:alpha="0.4"
+                app:layout_constraintTop_toBottomOf="@+id/barrierProductInfo"
+                />
+
+            <TextView
+                android:id="@+id/titleDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Description"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="@dimen/text_h3"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@+id/view1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_margin="@dimen/marginMid"
+                />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Product Description"
+                android:fontFamily="@font/roboto"
+                android:textSize="@dimen/text_h3"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@+id/titleDesc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/marginMid"
+                />
+
+            <TextView
+                android:id="@+id/titleFeatured"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Featured Products"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="@dimen/text_h3"
+                android:visibility="gone"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@+id/tvDesc"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/marginXL"
+                android:layout_marginStart="@dimen/marginMid"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/seeAll"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See All"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_h5"
+                app:layout_constraintTop_toTopOf="@+id/titleFeatured"
+                app:layout_constraintBottom_toBottomOf="@+id/titleFeatured"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:visibility="visible"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/marginMid"
+                app:layout_constraintTop_toBottomOf="@+id/titleFeatured"
+                android:layout_marginTop="@dimen/marginMid"
+                />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupRelatedProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="titleFeatured,seeAll"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

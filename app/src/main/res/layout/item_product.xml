@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="@dimen/corner_default"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/marginDefault">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitCenter"
+            tools:src="@tools:sample/backgrounds/scenic"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerDefault"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/image"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/text_h4"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/marginDefault"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="TMS 2-HD Wireless"
+            />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/ivAddCart"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAddCart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivAddCart"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/text_h2"
+            android:singleLine="true"
+            tools:text="Rs 12000"
+            android:textColor="@color/colorOnSurfaceVariant"
+            android:layout_marginEnd="@dimen/marginDefault"
+            />
+
+        <ImageView
+            android:id="@+id/ivAddCart"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_cart"
+            app:tint="#3A9B7A"
+            android:layout_marginTop="@dimen/marginMin"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

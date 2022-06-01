@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+
+    </group>
+
+    <group
+        android:id="@+id/nav_group_category"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_home"
+            android:icon="@drawable/ic_nav_home"
+            android:title="Products"
+            app:showAsAction="always"/>
+
+        <item
+            android:id="@+id/menu_auth"
+            android:icon="@drawable/ic_nav_profile"
+            android:title="Login/Register"
+            app:showAsAction="always"/>
+
+    </group>
+</menu>

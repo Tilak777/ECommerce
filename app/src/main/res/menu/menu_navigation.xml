@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_nav_home"
+        android:title="Home"
+        app:showAsAction="always"/>
+
+<!--    <item-->
+<!--        android:id="@+id/nav_search"-->
+<!--        android:icon="@drawable/ic_baseline_search_24"-->
+<!--        android:visible="false"-->
+<!--        android:title="Search" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/nav_wishlist"-->
+<!--        android:visible="false"-->
+<!--        android:icon="@drawable/ic_baseline_favorite_24"-->
+<!--        android:title="Wishlist" />-->
+
+    <item
+        android:id="@+id/nav_order"
+        android:icon="@drawable/ic_nav_order"
+        android:title="Order"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_nav_profile"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/nav_auth"
+        android:visible="false"
+        android:icon="@drawable/ic_nav_profile"
+        android:title="Login/Register"
+        app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/white"
+        android:alpha="0.6"
+        android:backgroundTint="@color/colorSecondary"
+        app:chipStartPadding="@dimen/marginDefault"
+        app:chipEndPadding="@dimen/marginDefault"
+        android:layout_margin="@dimen/marginMid"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/corner_high"
+        app:cardBackgroundColor="#F9F9F9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/marginMid">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/marginMid"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Login Account"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/text_h2"
+                android:layout_marginHorizontal="@dimen/marginMid"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2b2b2b"
+                android:alpha="0.1"
+                android:layout_marginTop="@dimen/marginDefault"
+                />
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/login_hello"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/marginMid"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:backgroundTint="#3669C9"
+                android:textAllCaps="false"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:layout_marginHorizontal="@dimen/marginMid"
+                android:layout_marginTop="@dimen/marginDefault"
+                app:cornerRadius="@dimen/corner_default"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:backgroundTint="#3A9B7A"
+                android:textAllCaps="false"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:layout_marginHorizontal="@dimen/marginMid"
+                android:layout_marginTop="@dimen/marginDefault"
+                app:cornerRadius="@dimen/corner_default"
+                />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

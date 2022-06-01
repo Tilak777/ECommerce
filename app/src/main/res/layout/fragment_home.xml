@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/srl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="64dp"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="Search Product Name"
+                app:iconGravity="end"
+                android:textSize="@dimen/text_h5"
+                android:gravity="start|center_vertical"
+                app:icon="@drawable/ic_baseline_search_24"
+                app:iconTint="@color/colorPrimary"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:strokeWidth="0dp"
+                android:layout_margin="@dimen/marginMid"
+                android:textColor="@color/text_hint"
+                app:cornerRadius="@dimen/corner_default"
+                android:backgroundTint="#F4F4F4"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Buy a Product"
+                android:textSize="@dimen/text_h3"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginHorizontal="@dimen/marginMid"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/marginMid"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:layout_marginVertical="@dimen/marginDefault"
+                />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

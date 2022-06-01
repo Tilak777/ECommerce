@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="MyApp_ActionBar" parent="Theme.AppCompat">
+        <item name="android:background">@color/white</item>
+        <item name="titleTextAppearance">@style/MyApp_ActionBar.TitleTextStyle</item>
+        <item name="titleTextColor">?attr/colorAccent</item>
+    </style>
+    <style name="MyApp_ActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="BottomNavBarStyle">
+        <item name="android:background">#F9F9F9</item>
+        <item name="itemIconSize">22dp</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="android:theme">@style/BottomNavBarTheme</item>
+    </style>
+    <style name="BottomNavBarTheme">
+        <item name="colorPrimary">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="ShapeAppearanceOverlay.App.CornerDefault" parent="">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSlider" parent="">
+        <item name="cornerSize">12dp</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.Corner25Percent" parent="">
+        <item name="cornerSize">25%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.Corner50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+    <style name="appBarIconImage">
+        <item name="android:layout_height">22dp</item>
+        <item name="android:layout_width">22dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="tint">@color/menuIcon</item>
+        <item name="tintMode">src_in</item>
+    </style>
+    <style name="appBarIconWithBadge">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_gravity">right|end|top</item>
+        <item name="android:layout_marginEnd">-6dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:background">@drawable/badge_background</item>
+        <item name="android:backgroundTint">#FF0000</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="TIL_AuthInput" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintEnabled">true</item>
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxBackgroundColor">#FAFAFA</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/corner_default</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_default</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_default</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_default</item>
+    </style>
+
+    <style name="TIL_SearchInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">#E9E9E9</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/corner_default</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_default</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_default</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_default</item>
+    </style>
+
+    <style name="ccp">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="ccp_autoFormatNumber">false</item>
+        <item name="ccp_defaultNameCode">NP</item>
+        <item name="ccp_useFlagEmoji">true</item>
+    </style>
+
+</resources>

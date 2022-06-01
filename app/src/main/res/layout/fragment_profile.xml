@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/marginMid"
+        android:scaleType="fitCenter"
+        android:src="@drawable/placeholder_profile"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.20"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Corner50Percent"
+        />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/text_h3"
+        android:layout_marginStart="@dimen/marginDefault"
+        app:layout_constraintBottom_toTopOf="@+id/tvEmail"
+        app:layout_constraintStart_toEndOf="@+id/ivProfile"
+        app:layout_constraintTop_toTopOf="@+id/ivProfile"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="John Doe" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/text_title"
+        android:textSize="@dimen/text_h4"
+        android:layout_marginStart="@dimen/marginDefault"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProfile"
+        app:layout_constraintStart_toEndOf="@+id/ivProfile"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        tools:text="tilakacharya903@gmail.com" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/corner_default"
+        android:visibility="gone"
+        app:cardBackgroundColor="#f9f9f9"
+        android:layout_marginTop="@dimen/marginHigh"
+        android:layout_marginHorizontal="@dimen/marginMid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfile">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/marginDefault"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Privacy Policy"
+                android:stateListAnimator="@null"
+                android:elevation="0dp"
+                app:elevation="0dp"
+                android:gravity="start|center_vertical"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_h4"
+                app:iconSize="22dp"
+                android:textColor="@color/text_title"
+                app:iconTint="#595757"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                app:icon="@drawable/ic_baseline_security_24"
+                android:layout_marginTop="@dimen/marginDefault"
+                />
+
+           <com.google.android.material.button.MaterialButton
+               style="@style/Widget.MaterialComponents.Button.TextButton"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:insetTop="0dp"
+               android:insetBottom="0dp"
+               android:text="Order History"
+               android:stateListAnimator="@null"
+               android:elevation="0dp"
+               app:elevation="0dp"
+               android:gravity="start|center_vertical"
+               android:textAllCaps="false"
+               android:visibility="gone"
+               android:textSize="@dimen/text_h4"
+               app:iconSize="22dp"
+               android:textColor="@color/text_title"
+               app:iconTint="#595757"
+               app:iconGravity="start"
+               app:iconPadding="8dp"
+               app:icon="@drawable/ic_baseline_insert_drive_file_24"
+               />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Share App"
+                android:stateListAnimator="@null"
+                android:elevation="0dp"
+                app:elevation="0dp"
+                android:gravity="start|center_vertical"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_h4"
+                app:iconSize="22dp"
+                android:textColor="@color/text_title"
+                app:iconTint="#595757"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                app:icon="@drawable/ic_baseline_share_24"
+                android:layout_marginTop="@dimen/marginDefault"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Rate Our App"
+                android:stateListAnimator="@null"
+                android:elevation="0dp"
+                app:elevation="0dp"
+                android:gravity="start|center_vertical"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_h4"
+                app:iconSize="22dp"
+                android:textColor="@color/text_title"
+                app:iconTint="#595757"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                app:icon="@drawable/ic_baseline_star_rate_24"
+                android:layout_marginTop="@dimen/marginDefault"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="About Us"
+                android:stateListAnimator="@null"
+                android:elevation="0dp"
+                app:elevation="0dp"
+                android:gravity="start|center_vertical"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_h4"
+                app:iconSize="22dp"
+                android:textColor="@color/text_title"
+                app:iconTint="#595757"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                app:icon="@drawable/ic_baseline_info_24"
+                android:layout_marginTop="@dimen/marginDefault"
+                />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogout"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Logout"
+        android:stateListAnimator="@null"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_h4"
+        app:iconSize="22dp"
+        android:textColor="@color/text_title"
+        app:iconTint="#595757"
+        app:iconGravity="textEnd"
+        app:iconPadding="8dp"
+        app:layout_goneMarginTop="@dimen/marginXL"
+        app:icon="@drawable/ic_baseline_power_settings_new_24"
+        android:layout_marginTop="@dimen/marginDefault"
+        app:layout_constraintTop_toBottomOf="@+id/mcvOptions"
+        android:layout_margin="@dimen/marginMid"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
